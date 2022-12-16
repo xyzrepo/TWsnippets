@@ -3,7 +3,7 @@ import * as vscode from 'vscode'
 async function openWindow(content: string) {
 	const document = await vscode.workspace.openTextDocument({
 		content,
-		language: 'javascriptreact',
+		language: 'html',
 	})
 	vscode.window.showTextDocument(document)
 }
@@ -55,6 +55,10 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 	private getHtmlContent(webview: vscode.Webview): string {
 		// Get the local path to main script run in the webview,
 		// then convert it to a uri we can use in the webview.
+		// const snippetsUri = webview.asWebviewUri(
+		// 	vscode.Uri.joinPath(this._extensionUri, 'assets', 'snippets', 'cta.template')
+		// )
+
 		const scriptUri = webview.asWebviewUri(
 			vscode.Uri.joinPath(this._extensionUri, 'assets', 'main.js')
 		)
@@ -88,9 +92,16 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 			<body>
 				<section class="container">
 					<input type="text" class="search-box" id="search" placeholder="Search" />
+					<select name="framework" class="framework-box" id="framework">
+						<option value="all">All Components</option>
+						<option value="vue">Tailwind + Vue</option>
+						<option value="react">Tailwind + React</option>
+						<option value="html">Tailwind + HTML</option>
+					</select>
 					<section id="content" class="content"></section>
 				</section>
 
+				
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 		</html>

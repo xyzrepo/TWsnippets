@@ -1,18 +1,18 @@
 {
-	"name": "sudopers-twsnippets",
-	"displayName": "TW Snippets",
-	"description": "fast track your Tailwind development with snippets ",
-	"version": "0.3.0",
+	"name": "TWsnippets",
+	"displayName": "XYZ Snippets",
+	"description": "fast track your Tailwind development with XYZ snippets ",
+	"version": "0.1.0",
 	"icon": "assets/icon.png",
-	"publisher": "sudopers",
-	"homepage": "https://github.com/rkjain119/TWsnippets#readme",
+	"publisher": "XYZ",
+	"homepage": "https://github.com/xyzrepo/TWsnippets#readme",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/rkjain119/TWsnippets.git"
+		"url": "https://github.com/xyzrepo/TWsnippets.git"
 	},
 	"engines": {
-		"vscode": "^1.71.0"
+		"vscode": "^1.74.0"
 	},
 	"categories": [
 		"Snippets"
@@ -34,7 +34,7 @@
 			"activitybar": [
 				{
 					"id": "custom-activitybar",
-					"title": "Tailwind Snippets",
+					"title": "XYZ Tailwind Snippets",
 					"icon": "assets/logo.svg"
 				}
 			]
@@ -44,15 +44,15 @@
 				{
 					"type": "webview",
 					"id": "vscodeSidebar.openview",
-					"name": "TWsnippets",
-					"contextualTitle": "TWsnippets"
+					"name": "XYZ",
+					"contextualTitle": "Snippets"
 				}
 			]
 		},
 		"commands": [
 			{
 				"command": "vscodeSidebar.openview",
-				"title": "open TWsnippets"
+				"title": "open XYZ snippets"
 			}
 		]
 	},
@@ -64,9 +64,9 @@
 		"lint": "eslint src --ext ts"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.61.0",
 		"@types/glob": "^7.1.4",
 		"@types/node": "14.x",
+		"@types/vscode": "^1.61.0",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
 		"eslint": "^7.32.0",
